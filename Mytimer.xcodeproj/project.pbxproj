@@ -13,6 +13,7 @@
 		35B8BBA61EE241E200BD9CA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B8BBA51EE241E200BD9CA7 /* Assets.xcassets */; };
 		35B8BBA91EE241E200BD9CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B8BBA71EE241E200BD9CA7 /* LaunchScreen.storyboard */; };
 		35B8BBB11EE25B4A00BD9CA7 /* SettingViwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8BBB01EE25B4A00BD9CA7 /* SettingViwController.swift */; };
+		35F53E3A1EE8368E00DDA55A /* se_maoudamashii_chime03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35F53E391EE8368E00DDA55A /* se_maoudamashii_chime03.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35B8BBA81EE241E200BD9CA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35B8BBAA1EE241E200BD9CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35B8BBB01EE25B4A00BD9CA7 /* SettingViwController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViwController.swift; sourceTree = "<group>"; };
+		35F53E391EE8368E00DDA55A /* se_maoudamashii_chime03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = se_maoudamashii_chime03.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				35B8BBA51EE241E200BD9CA7 /* Assets.xcassets */,
 				35B8BBA71EE241E200BD9CA7 /* LaunchScreen.storyboard */,
 				35B8BBAA1EE241E200BD9CA7 /* Info.plist */,
+				35F53E391EE8368E00DDA55A /* se_maoudamashii_chime03.mp3 */,
 			);
 			path = Mytimer;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			files = (
 				35B8BBA91EE241E200BD9CA7 /* LaunchScreen.storyboard in Resources */,
 				35B8BBA61EE241E200BD9CA7 /* Assets.xcassets in Resources */,
+				35F53E3A1EE8368E00DDA55A /* se_maoudamashii_chime03.mp3 in Resources */,
 				35B8BBA41EE241E200BD9CA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +312,7 @@
 				35B8BBAF1EE241E200BD9CA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

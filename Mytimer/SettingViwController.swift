@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SettingViwController: UIViewController ,UIPickerViewDataSource ,UIPickerViewDelegate {
 
   let settingArrey : [Int] = [10,20,30,40,50,60]
@@ -29,6 +30,7 @@ class SettingViwController: UIViewController ,UIPickerViewDataSource ,UIPickerVi
         if settingArrey[row] == timerValue {
           timerSettingPicker.selectRow(row, inComponent:0 ,animated:true)
         }
+                
       }
     
     }

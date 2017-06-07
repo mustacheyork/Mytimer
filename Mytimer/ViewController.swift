@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
   
@@ -28,10 +29,15 @@ class ViewController: UIViewController {
     settings.register(defaults: [settingKey:10])
     
   }
-  
+
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+    
+    let chaimPath = Bundle.main.bundleURL.appendingPathComponent("se_maoudamashii_chime03.mp3")
+    var chaimPlayer = AVAudioPlayer()
+
   }
   
   
@@ -104,6 +110,9 @@ class ViewController: UIViewController {
       
       count = 0
       
+      chaimPlayer = AVAudioPlayer(countOf: chaimPath, fileTypeHint: nil)
+      chaimPlayer.play()
+      
       timer.invalidate()
       
       let alertController = UIAlertController(title: "終了", message: "タイマー終了です", preferredStyle: .alert)
@@ -114,8 +123,9 @@ class ViewController: UIViewController {
       
       present(alertController, animated: true, completion: nil)
       
+      
+ 
     }
-    
   }
   override func viewDidAppear(_ animated: Bool) {
    count = 0
