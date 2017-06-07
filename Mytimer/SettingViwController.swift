@@ -11,7 +11,8 @@ import UIKit
 class SettingViwController: UIViewController ,UIPickerViewDataSource ,UIPickerViewDelegate {
 
   let settingArrey : [Int] = [10,20,30,40,50,60]
-  let settingKey = "time_value"
+  
+  let settingKey = "timer_value"
   
   
     override func viewDidLoad() {
@@ -23,15 +24,12 @@ class SettingViwController: UIViewController ,UIPickerViewDataSource ,UIPickerVi
       let settings = UserDefaults.standard
       let timerValue = settings.integer(forKey: settingKey)
       
-      //40だったら４０の戻る
+      //40だったら４０戻る
       for row in 0..<settingArrey.count{
         if settingArrey[row] == timerValue {
           timerSettingPicker.selectRow(row, inComponent:0 ,animated:true)
         }
-        
       }
-
-      
     
     }
 
@@ -69,7 +67,8 @@ class SettingViwController: UIViewController ,UIPickerViewDataSource ,UIPickerVi
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     return String(settingArrey[row])
   }
-  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+  {
     let settings = UserDefaults.standard
     settings.setValue(settingArrey[row], forKey: settingKey)
     settings.synchronize()

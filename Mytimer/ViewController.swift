@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     timer = Timer.scheduledTimer(timeInterval: 1.0,
                                  target: self,
-                                 selector: #selector(self.tiameImterrupt(_timer:)),
+                                 selector: #selector(self.tiamerImterrupt(_:)),
                                  userInfo: nil,
                                  repeats: true)
                                    //アラートはflse
@@ -74,6 +74,7 @@ class ViewController: UIViewController {
     if let nowTimer = timer {
       
       if nowTimer.isValid == true{
+        
         nowTimer.invalidate()
         
       }
@@ -95,14 +96,24 @@ class ViewController: UIViewController {
     
     
   }
-  func  tiameImterrupt(_timer:Timer) {
+  func  tiamerImterrupt(_ timer:Timer) {
     
     count += 1
+    
     if displayUpdate() <= 0 {
       
       count = 0
       
-      timer?.invalidate()
+      timer.invalidate()
+      
+      let alertController = UIAlertController(title: "終了", message: "タイマー終了です", preferredStyle: .alert)
+      
+      let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+      
+      alertController.addAction(defaultAction)
+      
+      present(alertController, animated: true, completion: nil)
+      
     }
     
   }
