@@ -50,6 +50,7 @@ class ViewController: UIViewController {
       
       if nowTimer.isValid == true{
         nowTimer.invalidate()
+        
       }
       
     }
@@ -109,9 +110,7 @@ class ViewController: UIViewController {
     if displayUpdate() <= 0 {
       
       count = 0
-      
-      chaimPlayer = AVAudioPlayer(countOf: chaimPath, fileTypeHint: nil)
-      chaimPlayer.play()
+    
       
       timer.invalidate()
       
@@ -123,8 +122,8 @@ class ViewController: UIViewController {
       
       present(alertController, animated: true, completion: nil)
       
-      
- 
+      chaimPlayer = AVAudioPlayer(countOf: chaimPath, fileTypeHint: nil)
+      chaimPlayer.play()
     }
   }
   override func viewDidAppear(_ animated: Bool) {
