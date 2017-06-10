@@ -18,7 +18,8 @@ class ViewController: UIViewController {
 		
   let settingKey = "timer_value"
 		
-  
+  let chaimPath = Bundle.main.bundleURL.appendingPathComponent("se_maoudamashii_chime03.mp3")
+  var chaimPlayer = AVAudioPlayer()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,10 +35,6 @@ class ViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-    
-    let chaimPath = Bundle.main.bundleURL.appendingPathComponent("se_maoudamashii_chime03.mp3")
-    var chaimPlayer = AVAudioPlayer()
-
   }
   
   
@@ -122,8 +119,12 @@ class ViewController: UIViewController {
       
       present(alertController, animated: true, completion: nil)
       
-      chaimPlayer = AVAudioPlayer(countOf: chaimPath, fileTypeHint: nil)
-      chaimPlayer.play()
+      do {
+        chaimPlayer = try AVAudioPlayer(contentsOf: chaimPath, fileTypeHint: nil)
+        chaimPlayer.play()
+      } catch {
+                print("エラーが発生しました！")
+      }
     }
   }
   override func viewDidAppear(_ animated: Bool) {
